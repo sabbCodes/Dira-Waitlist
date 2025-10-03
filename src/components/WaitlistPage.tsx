@@ -1,19 +1,31 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import { Header } from './Header';
 import { HeroSection } from './HeroSection';
+import { addToWaitlist } from '@/lib/supabase';
+import { toast } from 'sonner';
 
 export const WaitlistPage: React.FC = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleEmailSubmit = useCallback(async (email: string) => {
-    // Here you would typically integrate with your backend API
-    // For now, we'll just show a success message
+    if (!email) return;
+    
+    setIsSubmitting(true);
     try {
-      console.log('Submitting email to waitlist:', email);
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      alert('Thank you for joining our waitlist! We\'ll be in touch soon.');
+      const { error } = await addToWaitlist(email);
+      
+      if (error) {
+        console.error('Error adding to waitlist:', error);
+        toast.error('Failed to join waitlist. Please try again.');
+        return;
+      }
+      
+      toast.success('Successfully joined the waitlist! We\'ll be in touch soon.');
     } catch (error) {
-      console.error('Error submitting to waitlist:', error);
-      alert('There was an error joining the waitlist. Please try again.');
+      console.error('Unexpected error:', error);
+      toast.error('An unexpected error occurred. Please try again.');
+    } finally {
+      setIsSubmitting(false);
     }
   }, []);
 
@@ -38,7 +50,7 @@ export const WaitlistPage: React.FC = () => {
       <Header onGetEarlyAccess={handleGetEarlyAccess} />
       
       <main className="max-sm:flex max-sm:flex-col max-sm:items-center max-sm:px-4 max-sm:pt-8 max-sm:pb-12 max-sm:gap-12">
-        <HeroSection onEmailSubmit={handleEmailSubmit} />
+        <HeroSection onEmailSubmit={handleEmailSubmit} isSubmitting={isSubmitting} />
         
         {/* Decorative Cards - Desktop */}
         <div 

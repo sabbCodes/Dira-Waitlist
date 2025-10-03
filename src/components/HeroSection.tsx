@@ -3,9 +3,10 @@ import { EmailSignup } from './EmailSignup';
 
 interface HeroSectionProps {
   onEmailSubmit?: (email: string) => void;
+  isSubmitting?: boolean;
 }
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ onEmailSubmit }) => {
+export const HeroSection: React.FC<HeroSectionProps> = ({ onEmailSubmit, isSubmitting = false }) => {
   return (
     <section className="flex w-[551px] flex-col items-center gap-12 absolute -translate-x-2/4 z-10 left-2/4 top-[199px] max-md:w-[90%] max-md:max-w-[500px] max-md:top-[150px] max-sm:relative max-sm:w-full max-sm:gap-8 max-sm:top-auto max-sm:left-auto max-sm:transform-none">
       <div className="flex flex-col items-center gap-9 w-full">
@@ -26,7 +27,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onEmailSubmit }) => {
             undercollateralized lending.
           </p>
         </div>
-        <EmailSignup onSubmit={onEmailSubmit} />
+        <EmailSignup onSubmit={onEmailSubmit} isSubmitting={isSubmitting} />
       </div>
     </section>
   );
