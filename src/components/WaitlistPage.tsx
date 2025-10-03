@@ -42,7 +42,7 @@ export const WaitlistPage: React.FC = () => {
         
         {/* Decorative Cards - Desktop */}
         <div 
-          className="w-[1109px] h-[239px] absolute z-[5] left-[166px] top-[710px] max-md:w-[90%] max-md:left-[5%] max-md:top-[600px] max-sm:hidden"
+          className="w-[1109px] h-[239px] absolute z-[5] left-1/2 -translate-x-1/2 top-[710px] max-md:w-[90%] max-md:top-[600px] max-sm:hidden"
           aria-hidden="true"
         >
           <img
