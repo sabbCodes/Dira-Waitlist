@@ -58,7 +58,7 @@ export const WaitlistPage: React.FC = () => {
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/655a0cb171f76cbd3ad86865c5c9acfa0fbbb6c6?width=766"
             alt=""
-            className="w-[411px] h-[200px] absolute left-[698px] top-5 z-[1] max-md:w-[35%] max-md:h-auto max-md:left-[65%] shadow-[0_8px_30px_rgba(0,0,0,0.4)]"
+            className="w-[411px] h-[200px] absolute left-[710px] top-[26px] z-[1] max-md:w-[35%] max-md:h-auto max-md:left-[65%] shadow-[0_8px_30px_rgba(0,0,0,0.4)]"
           />
         </div>
         
