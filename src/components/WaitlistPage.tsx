@@ -48,17 +48,17 @@ export const WaitlistPage: React.FC = () => {
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/2b35e314c8f66377f13bffc6d43226fd41602ce9?width=822"
             alt=""
-            className="w-[411px] h-[200px] absolute left-0 top-5 z-[1] max-md:w-[35%] max-md:h-auto drop-shadow-lg"
+            className="w-[411px] h-[200px] absolute left-0 top-5 z-[1] max-md:w-[35%] max-md:h-auto shadow-[0_8px_30px_rgba(0,0,0,0.4)]"
           />
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/2a2d3ecdde695d1a2d4e114e4a08169583855e4d?width=716"
             alt=""
-            className="w-[358px] h-[239px] backdrop-blur-[100px] absolute left-[379px] top-0 z-[3] max-md:w-[30%] max-md:h-auto max-md:left-[32%] drop-shadow-xl"
+            className="w-[358px] h-[239px] backdrop-blur-[100px] absolute left-[365px] top-0 z-[3] max-md:w-[30%] max-md:h-auto max-md:left-[32%] shadow-[0_8px_40px_rgba(0,0,0,0.5)]"
           />
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/655a0cb171f76cbd3ad86865c5c9acfa0fbbb6c6?width=766"
             alt=""
-            className="w-[411px] h-[200px] absolute left-[698px] top-5 z-[1] max-md:w-[35%] max-md:h-auto max-md:left-[65%] drop-shadow-lg"
+            className="w-[411px] h-[200px] absolute left-[698px] top-5 z-[1] max-md:w-[35%] max-md:h-auto max-md:left-[65%] shadow-[0_8px_30px_rgba(0,0,0,0.4)]"
           />
         </div>
         
